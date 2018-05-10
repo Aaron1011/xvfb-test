@@ -1,0 +1,17 @@
+sudo: required
+dist: trusty
+
+language: java
+jdk:
+  - openjdk8
+    #  - oraclejdk8
+
+before_install:
+  #- sudo add-apt-repository ppa:techsavvy8989/trusty-backport
+  #- sudo apt-get update
+  - sudo wget "https://dl.bintray.com/aaron1011/McTester/Xvfb" -O /usr/bin/Xvfb 
+
+script: ./run.sh
+
+notifications:
+  email: false
